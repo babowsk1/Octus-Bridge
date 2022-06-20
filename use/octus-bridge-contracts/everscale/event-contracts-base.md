@@ -60,10 +60,9 @@ function receiveRoundRelays(uint[] keys) external onlyRelayRound
 
 **Parameters:**
 
-| Name     | Type    | Description                  |
-|----------|---------|------------------------------|
-| keys     | uint[]  | Keys of the round’s relayers |
-| roundNum | uint32  | The round’s number           |
+| Name | Type   | Description                  |
+|------|--------|------------------------------|
+| keys | uint[] | Keys of the round’s relayers |
 
 ### **EthereumBaseEvent**
 
@@ -79,9 +78,27 @@ function confirm(address voteReceiver) public eventPending
 
 | Name         | Type    | Description                                                  |
 |--------------|---------|--------------------------------------------------------------|
+| signature    | bytes   | relayer's signature of the Everscale event data              |
 | voteReceiver | address | Address of the receiver of the vote (event contract address) |
-| roundNum     | uint32  | The round’s number                                           |
 
 **Events emitted:**
 - Confirm
+
+#### **`reject`**
+
+Reject event. Can be called only by relayer which is in charge at this round.  
+Can be called only when event configuration is in Pending status.
+
+```
+function reject(address voteReceiver) public eventPending
+```
+
+**Parameters:**
+
+| Name         | Type    | Description                                                  |
+|--------------|---------|--------------------------------------------------------------|
+| voteReceiver | address | Address of the receiver of the vote (event contract address) |
+
+**Events emitted:**
+- Reject
 

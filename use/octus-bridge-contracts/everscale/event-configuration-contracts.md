@@ -126,3 +126,16 @@ function deriveEventAddress(
 | Name          | Type    | Description                                           |
 |---------------|---------|-------------------------------------------------------|
 | eventContract | address | Address of the corresponding everscale event contract |
+
+#### **`onEventConfirmedExtended`**
+
+Receives "confirm" callback from the event contract and checks event contract correctness. If it's correct, then sends the callback to the proxy with the same signature.
+
+```
+function onEventConfirmedExtended(
+        IEthereumEvent.EthereumEventInitData eventInitData,
+        TvmCell _meta,
+        address gasBackAddress
+    ) external override reserveMinBalance(MIN_CONTRACT_BALANCE)
+```
+

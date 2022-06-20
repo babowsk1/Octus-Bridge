@@ -19,9 +19,9 @@ function afterSignatureCheck(TvmSlice body, TvmCell /*message*/) private inline 
 
 **Return values:**
 
-| Type     | Description                           | Description                      |
-|----------|---------------------------------------|----------------------------------|
-| TvmSlice | DAO event represented in slice format | Contains data such as functionId |
+| Type     | Description                           |
+|----------|---------------------------------------|
+| TvmSlice | DAO event represented in slice format |
 
 #### **`close`**
 

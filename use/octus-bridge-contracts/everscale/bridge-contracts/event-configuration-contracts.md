@@ -54,11 +54,9 @@ function deriveEventAddress(
 
 **Parameters:**
 
-| Name           | Type                  | Description                         |
-|----------------|-----------------------|-------------------------------------|
-| eventInitData  | EthereumEventInitData | Ethereum event data structure       |
-| _meta          | TvmCell               | Arbitrary meta cell                 |
-| gasBackAddress | address               | Address to return the remaining gas |
+| Type    | Description                         |
+|---------|-------------------------------------|
+| address | Address to return the remaining gas |
 
 ### EverscaleEventConfiguration
 
@@ -141,9 +139,7 @@ function onEventConfirmedExtended(
 
 **Parameters:**
 
-| Name           | Type                  | Description                         |
-|----------------|-----------------------|-------------------------------------|
-| eventInitData  | EthereumEventInitData | Ethereum event data structure       |
-| _meta          | TvmCell               | Arbitrary meta cell                 |
-| gasBackAddress | address               | Address to return the remaining gas |
+| Type    | Description                         |
+|---------|-------------------------------------|
+| address | Address to return the remaining gas |
 

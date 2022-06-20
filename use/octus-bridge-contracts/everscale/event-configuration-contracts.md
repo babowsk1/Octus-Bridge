@@ -139,3 +139,11 @@ function onEventConfirmedExtended(
     ) external override reserveMinBalance(MIN_CONTRACT_BALANCE)
 ```
 
+**Parameters:**
+
+| Name           | Type                  | Description                         |
+|----------------|-----------------------|-------------------------------------|
+| eventInitData  | EthereumEventInitData | Ethereum event data structure       |
+| _meta          | TvmCell               | Arbitrary meta cell                 |
+| gasBackAddress | address               | Address to return the remaining gas |
+

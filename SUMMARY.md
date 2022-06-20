@@ -82,6 +82,7 @@
   * [Octus Bridge Contracts](use/octus-bridge-contracts/README.md)
     * [Everscale](use/octus-bridge-contracts/everscale/README.md)
       * [event-configuration-contracts](use/octus-bridge-contracts/everscale/event-configuration-contracts.md)
+      * [event-contracts-base](use/octus-bridge-contracts/everscale/event-contracts-base.md)
     * [Ethereum](use/octus-bridge-contracts/ethereum.md)
 * [See also](see-also/README.md)
   * [Broxus Github](https://github.com/broxus)

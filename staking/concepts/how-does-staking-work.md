@@ -1,0 +1,7 @@
+# How does Staking work?
+
+The whole point of stacking is that Proof-of-Stake (PoS) blockchains entrust transaction processing and block creation to special trusted nodes. Validators take turns in supporting the network, and the chance that you will be the one tasked with generating the next block increases in direct proportion to the number of coins in your wallet balance. This money is a guarantee that the nodes will not act to the detriment of the system, because then they will suffer themselves.
+
+To raise their rating, they attract the assets of other holders by paying them a portion of their share. Of course, you can try to become a validator yourself, but then you have to have enough money and ensure that your node synchronizes smoothly with the network. Also, in most POS systems, validators are selected and re-elected by voting. If you are a newbie, you have almost no chance of being elected. But this way you just lock the coins into a separate address, and after a certain amount of time you start getting dividends. That's how staking works in general terms, although the specific requirements may vary from blockchain ecosystem to blockchain ecosystem. So carefully study the staking requirements of your particular peer-to-peer network.
+
+Freezing virtual coins protects the network from inflation, because token holders have an incentive not to dump their assets at the first opportunity, but to hold on to them while earning passive income. This helps maintain the balance of supply and demand, protecting the asset from depreciation to some extent.

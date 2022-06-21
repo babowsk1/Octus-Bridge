@@ -122,6 +122,7 @@
       * [Vault Section](use/octus-bridge-contracts/ethereum/vault-section/README.md)
         * [Vault](use/octus-bridge-contracts/ethereum/vault-section/vault.md)
       * [DAO](use/octus-bridge-contracts/ethereum/dao.md)
+      * [Registry](use/octus-bridge-contracts/ethereum/registry.md)
 * [See also](see-also/README.md)
   * [Broxus Github](https://github.com/broxus)
   * [FlatQube](https://docs.flatqube.io/)

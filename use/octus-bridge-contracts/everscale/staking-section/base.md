@@ -642,3 +642,210 @@ function deployRelayRound(
 |---------|-----------------------------------|
 | address | Address of deployed relayer round |
 
+### StakingUpgradable
+
+#### **`installPlatformOnce`**	
+
+Installs updated platform.
+
+```
+function installPlatformOnce(TvmCell code, address send_gas_to) external onlyAdmin
+```
+
+**Parameters:**
+
+| Name      | Type    | Description                         |
+|-----------|---------|-------------------------------------|
+| code      | TvmCell | Platform code encoded to cell       |
+| sendGasTo | address | Address where to send remaining gas |
+
+#### **`installOrUpdateUserDataCode`**	
+
+Upgrades user data version.
+
+```
+function installOrUpdateUserDataCode(TvmCell code, address send_gas_to) external onlyAdmin
+```
+
+**Parameters:**
+
+| Name      | Type    | Description                         |
+|-----------|---------|-------------------------------------|
+| code      | TvmCell | User data code in cell format       |
+| sendGasTo | address | Address where to send remaining gas |
+
+**Events emitted:**
+- UserDataCodeUpgraded
+
+#### **`installOrUpdateElectionCode`**	
+
+Upgrades election version.
+
+```
+function installOrUpdateElectionCode(TvmCell code, address send_gas_to) external onlyAdmin
+```
+
+**Parameters:**
+
+| Name      | Type    | Description                         |
+|-----------|---------|-------------------------------------|
+| code      | TvmCell | Election code in cell format        |
+| sendGasTo | address | Address where to send remaining gas |
+
+**Events emitted:**
+- ElectionCodeUpgraded
+
+#### **`installOrUpdateRelayRoundCode`**	
+
+Upgrades relayer round version.
+
+```
+function installOrUpdateRelayRoundCode(TvmCell code, address send_gas_to) external onlyAdmin
+```
+
+**Parameters:**
+
+| Name      | Type    | Description                         |
+|-----------|---------|-------------------------------------|
+| code      | TvmCell | relayer round code in cell format   |
+| sendGasTo | address | Address where to send remaining gas |
+
+**Events emitted:**
+- RelayRoundCodeUpgraded
+
+#### *`upgradeUserData`**
+
+Upgrades user data.
+
+```
+function upgradeUserData(address send_gas_to) external view onlyActive
+```
+
+**Parameters:**
+
+| Name      | Type    | Description                         |
+|-----------|---------|-------------------------------------|
+| sendGasTo | address | Address where to send remaining gas |
+
+
+#### **`forceUpgradeUserData`**	
+
+Upgrades user data. 
+
+```
+function forceUpgradeUserData(
+        address user,
+        address send_gas_to
+    ) external view onlyAdmin
+```
+
+**Parameters:**
+
+| Name      | Type    | Description                         |
+|-----------|---------|-------------------------------------|
+| user      | address | User address                        |
+| sendGasTo | address | Address where to send remaining gas |
+
+#### **`_upgradeUserData`**	
+
+Upgrades user data code and version by request.
+
+```
+function _upgradeUserData(address user, uint128 gas_value, address send_gas_to) internal view
+```
+**Parameters:**
+
+| Name      | Type    | Description                         |
+|-----------|---------|-------------------------------------|
+| user      | address | User address                        |
+| gas_value | uint128 | Gas value spent for upgrade         |
+| sendGasTo | address | Address where to send remaining gas |
+
+**Events emitted:**
+- RequestedUserDataUpgrade
+
+#### **`upgradeElection`**	
+
+Upgrades election code and version by request.
+
+```
+function upgradeElection(
+        uint32 round_num,
+        address send_gas_to
+    ) external view onlyAdmin
+```
+
+**Parameters:**
+
+| Name      | Type    | Description                         |
+|-----------|---------|-------------------------------------|
+| round_num | uint32  | Round number                        |
+| sendGasTo | address | Address where to send remaining gas |
+
+**Events emitted:**
+- RequestedElectionUpgrade
+
+#### **`upgradeRelayRound`**	
+
+Upgrades relayer round code and version by request.
+
+```
+function upgradeRelayRound(
+        uint32 round_num,
+        address send_gas_to
+    ) external view onlyAdmin
+```
+
+**Parameters:**
+
+| Name      | Type    | Description                         |
+|-----------|---------|-------------------------------------|
+| round_num | uint32  | Round number                        |
+| sendGasTo | address | Address where to send remaining gas |
+
+**Events emitted:**
+- RequestedRelayRoundUpgrade
+
+#### **`_buildElectionParams`**	
+
+Returns election params in cell format based on the round number.
+
+```
+function _buildElectionParams(uint32 round_num) internal inline view returns (TvmCell)
+```
+
+**Parameters:**
+
+| Name      | Type   | Description  |
+|-----------|--------|--------------|
+| round_num | uint32 | Round number |
+
+**Return value:**
+
+| Type    | Description                              |
+|---------|------------------------------------------|
+| TvmCell | Election parameters data encoded to cell |
+
+#### **`_buildRelayRoundParams`**	
+
+Returns relayer round params in cell format based on the round number.
+
+```
+function _buildRelayRoundParams(uint32 round_num) internal inline view returns (TvmCell)
+```
+
+**Parameters:**
+
+| Name      | Type   | Description  |
+|-----------|--------|--------------|
+| round_num | uint32 | Round number |
+
+| Type    | Description                          |
+|---------|--------------------------------------|
+| TvmCell | Relayer round params encoded to cell |
+
+
+
+
+
+

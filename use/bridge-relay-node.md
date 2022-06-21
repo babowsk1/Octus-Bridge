@@ -1,2 +1,0 @@
-# Bridge Relay Node
-

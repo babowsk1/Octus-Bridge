@@ -109,7 +109,7 @@
         * [Receiver](use/octus-bridge-contracts/everscale/utils-section/receiver.md)
     * [Ethereum](use/octus-bridge-contracts/ethereum/README.md)
       * [Bridge Section](use/octus-bridge-contracts/ethereum/bridge-section/README.md)
-        * [Bridge](use/octus-bridge-contracts/ethereum/bridge-section/bridge.md) 
+        * [Bridge](use/octus-bridge-contracts/ethereum/bridge-section/bridge.md)
         * [StakingRelayVerifier](use/octus-bridge-contracts/ethereum/bridge-section/stakingrelayverifier.md)
       * [MultiVault Section](use/octus-bridge-contracts/ethereum/multivault-section/README.md)
         * [MultiVault](use/octus-bridge-contracts/ethereum/multivault-section/multivault.md)
@@ -126,3 +126,4 @@
 * [See also](see-also/README.md)
   * [Broxus Github](https://github.com/broxus)
   * [FlatQube](https://docs.flatqube.io/)
+  * [EVER Wallet](https://docs.everwallet.net/)

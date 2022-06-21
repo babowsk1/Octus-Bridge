@@ -1,10 +1,10 @@
 ---
 description: Octus Bridge introduction.
+cover: .gitbook/assets/Octus Bridge_gitbookm.png
+coverY: 0
 ---
 
 # Welcome to Octus Bridge
-
-
 
 {% embed url="https://youtu.be/x-7boWwipKA" %}
 

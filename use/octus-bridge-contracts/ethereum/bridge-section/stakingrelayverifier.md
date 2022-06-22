@@ -8,8 +8,8 @@ Emits the event for verifying relayer address.
 function verify_relay_staker_address(int8 workchain_id, uint256 address_body) external
 ```
 
-**Parameters:
-**
+**Parameters:**
+
 | Name         | Type    | Description               |
 |--------------|---------|---------------------------|
 | workchain_id | int8    | Id of the workchain       |

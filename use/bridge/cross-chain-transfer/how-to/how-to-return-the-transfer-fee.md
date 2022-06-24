@@ -5,7 +5,7 @@ You can get back about \~5.2 EVER, from the transaction fee.
 At first you need to[ **find your transaction**](find-my-transaction.md) and go to the **transfer page**.\
 Here you need to copy the **transfer address**. Just click on the icon.
 
-![](<../../../../.gitbook/assets/image (28) (1) (1).png>)
+![](<../../../../.gitbook/assets/image (28) (1) (1) (1).png>)
 
 Now go to [**EVER Wallet**](https://app.gitbook.com/o/-MUxjK3XWZCxuBwyXzkS/s/vwtaQbYcgICT7ubKSITZ/) (in our case it is an extension) and [send ](https://docs.everwallet.net/manage-assets/sending-and-receiving-tokens)about \~0.1 EVER to the **transfer address** we copied.\
 \

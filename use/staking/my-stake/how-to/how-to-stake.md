@@ -13,4 +13,4 @@ Note the commission is written 11.5 EVER. You will withdraw from a purse 11.5 EV
 Upon successful completion of the transaction, you start to get reward every second, which will be burned in future Octus Bridge yield distribution and will be credited to us as bridge tokens.\
 You can see your total amount of staked tokens at [**My staking performance**](../interface/my-staking-performance.md) block.
 
-![](<../../../../.gitbook/assets/image (18).png>)
+![](<../../../../.gitbook/assets/image (4).png>)

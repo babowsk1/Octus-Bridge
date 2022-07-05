@@ -1,4 +1,4 @@
-# Octus Bridge API
+# Open API
 
 {% hint style="warning" %}
 **Unfinished article!**\

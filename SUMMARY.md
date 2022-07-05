@@ -129,9 +129,11 @@
     * [Registry](integrate/octus-bridge-contracts/ethereum/registry.md)
 * [Bridge Relay Node](https://github.com/broxus/octusbridge-relay)
 * [Token Contracts](integrate/token-contracts/README.md)
-* [Octus Bridge API](integrate/octus-bridge-api/README.md)
-  * [Bridge API](integrate/octus-bridge-api/bridge-api.md)
-  * [DAO API](integrate/octus-bridge-api/dao-api.md)
+* [Open API](integrate/octus-bridge-api/README.md)
+  * [Bridge API](integrate/octus-bridge-api/bridge-api/README.md)
+  * [DAO API](integrate/octus-bridge-api/dao-api/README.md)
+    * [DAO](integrate/octus-bridge-api/bridge-api/dao.md)
+    * [Relays](integrate/octus-bridge-api/bridge-api/relays.md)
 
 ## see also
 

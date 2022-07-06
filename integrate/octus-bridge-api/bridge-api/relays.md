@@ -292,7 +292,7 @@ app.post('/relays_pages/relays_round_info', (req, res) => {
 })
 ```
 
-{% swagger method="post" path="/all_relay_ronds_info" baseUrl="https://api.octusbridge.io/v1/relays_pages" summary="Get all validation validation rounds info" %}
+{% swagger method="post" path="/all_relay_ronds_info" baseUrl="https://api.octusbridge.io/v1/relays_pages" summary="Get all validation rounds info" %}
 {% swagger-description %}
 
 {% endswagger-description %}

@@ -34,9 +34,9 @@
 {% endswagger-response %}
 {% endswagger %}
 
-This function is used to return information about a specific relay based on its address.
+This function is used to return information about a specific relayer based on its address.
 
-It can be used anywhere where details about a specific relayer is needed such as details about events and their confirmation, relay rounds, rewards, stake etc.
+It can be used anywhere where details about a specific relayer is needed such as details about events and their confirmation, validating rounds, rewards, stake etc.
 
 ### Request parameters:
 
@@ -123,11 +123,11 @@ app.post('/relays_pages/relay_info', (req, res) => {
 {% endswagger-response %}
 {% endswagger %}
 
-This function use to get relayer round info.
+This function use to get validation round info.
 
 It can be used for showing a relayer’s efforts in one specific round.\
 Following data about the relayer’s performance based on the round number can be displayed:\
-How much a relayer staked to become a relayer, number of events he confirmed, volume from all the transfers relayer validated happened from everscale to ethereum network and vice versa shown in USDTs, round address, start and end time of the round
+How much a relayer staked to become a relayer, number of events he confirmed, volume from all the transfers relayer validated happened from everscale to ethereum network and vice versa shown in USDTs, round address, start and end time of the round.
 
 ### Request parameters:
 
@@ -141,7 +141,7 @@ Required body parameters:
 
 | Name                 | Example value                                                      | Comment                                                                             |
 | -------------------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
-| endTime              | 1654604726000                                                      | Date time of the relay round’s end                                                  |
+| endTime              | 1654604726000                                                      | Date time of the validation round’s end                                             |
 | ethToTonUsdt         | 6119978.1405                                                       | Total amount of ethereum tokens in USDT swapped to everscale tokens and transferred |
 | eventsConfirmed      | 661                                                                | Total number of events the relayer confirmed in the current round                   |
 | evmStats             | : \[                                                               | List of data related to the evm events                                              |
@@ -229,7 +229,7 @@ app.post('/relays_pages/relay_round_info', (req, res) => {
 
 This function returns list of relayers and details about them based on the round number they are part of.&#x20;
 
-Can be used for listing all or certain number of relayers when it comes to one relay round. \
+Can be used for listing all or certain number of relayers when it comes to one validation round. \
 Some of the details about the relayers are number of confirmed events and the share per event, relay’s address, list of events, place of a relayer and also info about the round such as start and end time, round number and address, etc.
 
 ### Request parameters:&#x20;
@@ -250,7 +250,7 @@ Required body parameters:
 | Name                 | Example value                                                      | Comment                                                                                                   |
 | -------------------- | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
 | relays               | : \[                                                               | List of relays participating in the given round, determined by the amount set in the limit body parameter |
-| endTime              | 1654604726000                                                      | Date time of the relay round’s end                                                                        |
+| endTime              | 1654604726000                                                      | Date time of the validation round’s end                                                                   |
 | ethToTonUsdt         | 5567068.9741                                                       | Total amount of ethereum tokens in USDT swapped to everscale tokens and transferred                       |
 | eventsConfirmed      | 661                                                                | Total number of events the relayer confirmed in the current round                                         |
 | eventsConfirmedShare | 0.9511                                                             | Share of the relayer per event confirmed                                                                  |

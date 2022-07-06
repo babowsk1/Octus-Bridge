@@ -371,3 +371,27 @@ Required body parameters:
 | tonToEthUsdt       | 573326.1229                                                        | Total amount of everscale tokens in USDT swapped to ethereum tokens and transferred |
 | totalRoundConfirms | 108                                                                | Number of total confirms in the monitored round                                     |
 | totalCount         | 18                                                                 | Number of validation rounds in which the desired relayer takes part                 |
+
+### Example
+
+```graphql
+app.post('/relays_pages/all_relay_rounds_info', (req, res) => {
+    axios({
+        method: 'post',
+        url: `${apiUrl}/relays_pages/all_relay_rounds_info`,
+        data: {
+            limit: req.body.limit,
+            offset: req.body.offset,
+            ordering: req.body.ordering,
+            userAddress: req.body.userAddress
+        }
+      })
+    .then(function (response) {
+        res.send(response.data)
+    })
+    .catch(function(error){
+        console.error(error)
+        res.send('Error')
+    })
+})
+```

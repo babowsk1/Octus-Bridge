@@ -245,3 +245,50 @@ Required body parameters:
 
 ### Response fields explanation:&#x20;
 
+
+
+| Name                 | Example value                                                      | Comment                                                                                                   |
+| -------------------- | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
+| relays               | : \[                                                               | List of relays participating in the given round, determined by the amount set in the limit body parameter |
+| endTime              | 1654604726000                                                      | Date time of the relay round’s end                                                                        |
+| ethToTonUsdt         | 5567068.9741                                                       | Total amount of ethereum tokens in USDT swapped to everscale tokens and transferred                       |
+| eventsConfirmed      | 661                                                                | Total number of events the relayer confirmed in the current round                                         |
+| eventsConfirmedShare | 0.9511                                                             | Share of the relayer per event confirmed                                                                  |
+| evmStats             | : \[]                                                              | List of data related to the evm events                                                                    |
+| chainId              | 0                                                                  | Id of the chain                                                                                           |
+| potentialConfirmed   | 0                                                                  | Number of potential events confirmed                                                                      |
+| relayConfirmed       | 0                                                                  | Number of actual events confirmed                                                                         |
+| relayAddress         | 0:ef79b4aac06c33ab3435943d196de9ba9ee48a3e4572c86a8ad3a2bf84b4f767 | Address of the relayer                                                                                    |
+| relayPlace           | null                                                               | Place of the relayer                                                                                      |
+| roundAddress         | 0:20e866e80bb8ded0ad14f7317a58b05d378fd108306aafed64650465cd68b19e | Address of the round certain relayer is participating in                                                  |
+| roundNum             | 15                                                                 | Round number                                                                                              |
+| stake                | 100000                                                             | Amount relayer staked to become one of the participants                                                   |
+| startTime            | 1653999926000                                                      | Date time of round start                                                                                  |
+| tonToEthUsdt         | 5567068.9741                                                       | Total amount of everscale tokens in USDT swapped to ethereum tokens and transferred                       |
+| totalRoundConfirms   | 695                                                                | Number of total confirms in the monitored round                                                           |
+| totalCount           | 23                                                                 | Total number of relayers participating in the round with given round number                               |
+
+### Example
+
+```java
+app.post('/relays_pages/relays_round_info', (req, res) => {
+    axios({
+        method: 'post',
+        url: `${apiUrl}/relays_pages/relays_round_info`,
+        data: {
+            limit: req.body.limit,
+            offset: req.body.offset,
+            ordering: req.body.ordering,
+            roundNum: req.body.roundNum
+        }
+      })
+    .then(function (response) {
+        res.send(response.data)
+    })
+    .catch(function(error){
+        console.error(error)
+        res.send('Error')
+    })
+})
+
+```

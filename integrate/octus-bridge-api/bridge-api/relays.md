@@ -290,5 +290,84 @@ app.post('/relays_pages/relays_round_info', (req, res) => {
         res.send('Error')
     })
 })
-
 ```
+
+{% swagger method="post" path="/all_relay_ronds_info" baseUrl="https://api.octusbridge.io/v1/relays_pages" summary="Get all validation validation rounds info" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-response status="200: OK" description="Successful resonse" %}
+```
+{
+  "relays": [
+    {
+      "relayAddress": "0:daacff0f136da1d5c9fa73200d481362c44756b0ff7d083ee02e95f00a078557",
+      "roundNum": 1,
+      "stake": "244636",
+      "eventsConfirmed": 97,
+      "tonToEthUsdt": "573326.1229",
+      "ethToTonUsdt": "401075.7860",
+      "relayPlace": null,
+      "eventsConfirmedShare": "0.8981",
+      "totalRoundConfirms": 108,
+      "roundAddress": "0:77f4e7eb93d7fb3432f297782f2cd2e5fb2a62bb05d8a9590ea54c6ab954254d",
+      "startTime": 1645303857000,
+      "endTime": 1645908657000,
+      "evmStats": []
+    },
+    ...
+   {
+      "relayAddress": "0:daacff0f136da1d5c9fa73200d481362c44756b0ff7d083ee02e95f00a078557",
+      "roundNum": 10,
+      "stake": "244636",
+      "eventsConfirmed": 529,
+      "tonToEthUsdt": "5204152.7479",
+      "ethToTonUsdt": "4509235.2178",
+      "relayPlace": null,
+      "eventsConfirmedShare": "0.8773",
+      "totalRoundConfirms": 603,
+      "roundAddress": "0:cc312267aa40b7f9a56ce1aad46dbca5088c2d30ee1ba88555d2e97941ac9816",
+      "startTime": 1650975926000,
+      "endTime": 1651580726000,
+      "evmStats": []
+    }
+  ],
+  "totalCount": 18
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+This function returns all validation relay rounds in which specified relayer took part in.&#x20;
+
+It can be used for monitoring a relayer's activity and history by retrieving data such as details about events and share per event, round details, relayer’s place and stake, etc. only by inputting relayer’s address.
+
+### Request parameters:
+
+Required body parameters:
+
+| Name        | Example value                                                      | Comment                                                                                            |
+| ----------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
+| limit       | 10                                                                 | Maximum number of relayers to be retrieved                                                         |
+| offset      | 0                                                                  | Offset                                                                                             |
+| ordering    | roundnumascending                                                  | Value based on which the retrieved relayer data will be ordered (stakeascending, stakedescending…) |
+| userAddress | 0:daacff0f136da1d5c9fa73200d481362c44756b0ff7d083ee02e95f00a078557 | Address of the relayer                                                                             |
+
+### Response fields explanation:&#x20;
+
+| Name               | Example value                                                      | Comment                                                                             |
+| ------------------ | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
+| evmStats           | \[]                                                                | List of data related to the evm events                                              |
+| chainId            | 0                                                                  | Id of the chain                                                                     |
+| potentialConfirmed | 0                                                                  | Number of potential events confirmed                                                |
+| relayConfirmed     | 0                                                                  | Number of actual events confirmed                                                   |
+| relayAddress       | 0:aacff0f136da1d5c9fa73200d481362c44756b0ff7d083ee02e95f00a078557  | Address of the relayer                                                              |
+| relayPlace         | null                                                               | Place of the relayer                                                                |
+| roundAddress       | 0:77f4e7eb93d7fb3432f297782f2cd2e5fb2a62bb05d8a9590ea54c6ab954254d | Address of the round certain relayer is participating in                            |
+| roundNum           | 1                                                                  | Round number                                                                        |
+| stake              | 244636                                                             | Amount relayer staked to become one of the participants                             |
+| startTime          | 1645303857000                                                      | Date time of round start                                                            |
+| tonToEthUsdt       | 573326.1229                                                        | Total amount of everscale tokens in USDT swapped to ethereum tokens and transferred |
+| totalRoundConfirms | 108                                                                | Number of total confirms in the monitored round                                     |
+| totalCount         | 18                                                                 | Number of validation rounds in which the desired relayer takes part                 |

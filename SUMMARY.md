@@ -133,7 +133,7 @@
   * [Bridge API](integrate/octus-bridge-api/bridge-api/README.md)
     * [Relays](integrate/octus-bridge-api/bridge-api/relays.md)
     * [DAO](integrate/octus-bridge-api/bridge-api/dao.md)
-  * [DAO API](integrate/octus-bridge-api/dao-api.md)
+  * [DAO API](integrate/octus-bridge-api/dao-api/README.md)
 
 ## see also
 

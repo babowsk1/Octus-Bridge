@@ -33,7 +33,7 @@ This function is used to get stakeholders data.
 
 It can be used for showing a list of desired number of stakeholders, where the information about total number of votes a stakeholder raised, how much stakeholder’s vote can weigh, address and number of proposals he voted for ordered by the vote weight.
 
-### Request parameters:
+### Request parameters
 
 Required body parameters:
 
@@ -43,9 +43,7 @@ Required body parameters:
 | offset   | `0`                   | Offset                                                                                                                                                                                                                       |
 | ordering | `voteweightascending` | Value based on which the retrieved stakeholders data will be ordered (voteweightascending, voteweightdescending…)based on which the retrieved stakeholders data will be ordered (voteweightascending, voteweightdescending…) |
 
-### Response fields explanation:
-
-
+### Response fields explanation
 
 | Name               | Example value                                                        | Comment                                                          |
 | ------------------ | -------------------------------------------------------------------- | ---------------------------------------------------------------- |
@@ -77,7 +75,6 @@ app.post('/dao/search/stakeholders', (req, res) => {
         res.send('Error')
     })
 })
-
 ```
 
 {% swagger method="get" path="/user/{user_address}" baseUrl="https://api.octusbridge.io/v1/dao" summary="Get stakeholder data" %}
@@ -101,7 +98,7 @@ This function is used to get stakeholder data.
 
 It can be used to show one’s stakeholder data based on his account address. Information that can be displayed is the amount of votes certain stakeholder raised, his vote weight, address and total number of proposal votes.
 
-### Request parameters:
+### Request parameters
 
 Required parameters:
 
@@ -109,9 +106,7 @@ Required parameters:
 | ----------- | ------------------------------------------------------------------ | ----------------------------- |
 | userAddress | 0:66003d2db4bc1566c3d7d3c118004b1e1d54f1f62c30c6b173845db3aa459f07 | Address of particular account |
 
-### Response fields explanation:
-
-
+### Response fields explanation
 
 | Name               | Example value                                                      | Comment                                        |
 | ------------------ | ------------------------------------------------------------------ | ---------------------------------------------- |
@@ -137,4 +132,3 @@ app.get('/dao/user/:user_address', (req, res) => {
     })
 })
 ```
-

@@ -38,7 +38,7 @@ This function is used to return information about a specific relayer based on it
 
 It can be used anywhere where details about a specific relayer is needed such as details about events and their confirmation, validating rounds, rewards, stake etc.
 
-### Request parameters:
+### Request parameters
 
 Required body parameters:
 
@@ -46,7 +46,7 @@ Required body parameters:
 | ------------ | ------------------------------------------------------------------ | ------------------------------ |
 | relayAddress | 0:daacff0f136da1d5c9fa73200d481362c44756b0ff7d083ee02e95f00a078557 | Address of the desired relayer |
 
-### Response fields explanation:
+### Response fields explanation
 
 | Name                    | Example value       | Comment                                                |
 | ----------------------- | ------------------- | ------------------------------------------------------ |
@@ -232,7 +232,7 @@ This function returns list of relayers and details about them based on the round
 Can be used for listing all or certain number of relayers when it comes to one validation round. \
 Some of the details about the relayers are number of confirmed events and the share per event, relay’s address, list of events, place of a relayer and also info about the round such as start and end time, round number and address, etc.
 
-### Request parameters:&#x20;
+### Request parameters
 
 Required body parameters:
 
@@ -243,7 +243,7 @@ Required body parameters:
 | ordering | stakeascending | Value based on which the retrieved relayer data will be ordered (stakeascending, stakedescending…) |
 | roundNum | 15             | Round number                                                                                       |
 
-### Response fields explanation:&#x20;
+### Response fields explanation
 
 
 
@@ -343,7 +343,7 @@ This function returns all validation relay rounds in which specified relayer too
 
 It can be used for monitoring a relayer's activity and history by retrieving data such as details about events and share per event, round details, relayer’s place and stake, etc. only by inputting relayer’s address.
 
-### Request parameters:
+### Request parameters
 
 Required body parameters:
 
@@ -354,7 +354,7 @@ Required body parameters:
 | ordering    | roundnumascending                                                  | Value based on which the retrieved relayer data will be ordered (stakeascending, stakedescending…) |
 | userAddress | 0:daacff0f136da1d5c9fa73200d481362c44756b0ff7d083ee02e95f00a078557 | Address of the relayer                                                                             |
 
-### Response fields explanation:&#x20;
+### Response fields explanation&#x20;
 
 | Name               | Example value                                                      | Comment                                                                             |
 | ------------------ | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
@@ -394,4 +394,95 @@ app.post('/relays_pages/all_relay_rounds_info', (req, res) => {
         res.send('Error')
     })
 })
+```
+
+{% swagger method="post" path="/round_info" baseUrl="https://api.octusbridge.io/v1/relays_pages" summary="Get validation round info" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-response status="200: OK" description="Successful request" %}
+```
+{
+  "roundNum": 10,
+  "totalStake": "2549112.692146446000",
+  "totalStakeChange": "8.5100",
+  "averageRelayStake": "106213.02883900",
+  "averageRelayStakeChange": "-0.5300",
+  "eventsConfirmed": 603,
+  "relaysCount": 24,
+  "relaysCountChange": "9.0900",
+  "tonToEthUsdt": "6007826.4910",
+  "ethToTonUsdt": "5204152.7479",
+  "evmStats": [
+    {
+      "chainId": 1,
+      "relayConfirmed": 0,
+      "potentialConfirmed": 142
+    },
+    ...
+     {
+      "chainId": 43114,
+      "relayConfirmed": 0,
+      "potentialConfirmed": 7
+    }
+  ]
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+This function returns basic information about relayers based on their addresses, round number and stake.
+
+It can be used for filtering rounds based on their number and showing information about them such as stake and stake changes, information about events, relayers and change in number of them, amount of USDTs transferred through the round duration.
+
+### Request parameters
+
+Required body parameters:
+
+| Name     | Example value | Comment      |
+| -------- | ------------- | ------------ |
+| roundNum | 10            | Round number |
+
+### Response fields explanation
+
+
+
+| Name                    | Example value        | Comment                                                                             |
+| ----------------------- | -------------------- | ----------------------------------------------------------------------------------- |
+| averageRelayStake       | 106213.02883900      | Average relayers stake                                                              |
+| averageRelayStakeChange | -0.5300              | Change of the average relayers stake in percentage                                  |
+| ethToTonUsdt            | 5204152.7479         | Total amount of ethereum tokens in USDT swapped to everscale tokens and transferred |
+| eventsConfirmed         | 603                  | Total number of events the relayer confirmed in the current round                   |
+| evmStats                | : \[                 | List of data related to the evm events                                              |
+| chainId                 | 1                    | Id of the chain                                                                     |
+| potentialConfirmed      | 142                  | Number of potential events confirmed                                                |
+| relayConfirmed          | 0                    | Number of actual events confirmed                                                   |
+| relaysCount             | 24                   | Total number of relayers in the desired round                                       |
+| relaysCountChange       | 9.0900               | Change of number of relayers participating in the round in percentage               |
+| roundNum                | 10                   | Round number                                                                        |
+| tonToEthUsdt            | 6007826.4910         | Total amount of everscale tokens in USDT swapped to ethereum tokens and transferred |
+| totalStake              | 2549112.692146446000 | Sum of all the stakes relayers invested in the round                                |
+| totalStakeChange        | 8.5100               | Change of total stake invested in percentage                                        |
+
+### Example
+
+```java
+app.post('/relays_pages/round_info', (req, res) => {
+    axios({
+        method: 'post',
+        url: `${apiUrl}/relays_pages/round_info`,
+        data: {
+            roundNum: req.body.roundNum
+        }
+      })
+    .then(function (response) {
+        res.send(response.data)
+    })
+    .catch(function(error){
+        console.error(error)
+        res.send('Error')
+    })
+
+})​
 ```

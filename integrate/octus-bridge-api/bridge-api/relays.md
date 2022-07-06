@@ -1,8 +1,8 @@
 # Relays
 
-{% swagger method="post" path="/relay_info" baseUrl="https://api.octusbridge.io/v1/relays_pages" summary="Get relayer's info" %}
+{% swagger method="post" path="/relay_info" baseUrl="https://api.octusbridge.io/v1/relays_pages" summary="Get relayer" %}
 {% swagger-description %}
-****
+
 {% endswagger-description %}
 
 {% swagger-response status="200: OK" description="Successful request" %}
@@ -36,7 +36,7 @@
 
 This function is used to return information about a specific relay based on its address.
 
-&#x20;It can be used anywhere where details about a specific relayer is needed such as details about events and their confirmation, relay rounds, rewards, stake etc.
+It can be used anywhere where details about a specific relayer is needed such as details about events and their confirmation, relay rounds, rewards, stake etc.
 
 ### Request parameters:
 
@@ -125,8 +125,8 @@ app.post('/relays_pages/relay_info', (req, res) => {
 
 This function use to get relayer round info.
 
-It can be used for showing a relayer’s efforts in one specific round. \
-Following data about the relayer’s performance based on the round number can be displayed: \
+It can be used for showing a relayer’s efforts in one specific round.\
+Following data about the relayer’s performance based on the round number can be displayed:\
 How much a relayer staked to become a relayer, number of events he confirmed, volume from all the transfers relayer validated happened from everscale to ethereum network and vice versa shown in USDTs, round address, start and end time of the round
 
 ### Request parameters:
@@ -138,8 +138,6 @@ Required body parameters:
 | relayAddress | 0:daacff0f136da1d5c9fa73200d481362c44756b0ff7d083ee02e95f00a078557 | Address of the desired relayer |
 
 ### Response fields explanation:
-
-
 
 | Name                 | Example value                                                      | Comment                                                                             |
 | -------------------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------- |
@@ -180,5 +178,70 @@ app.post('/relays_pages/relay_round_info', (req, res) => {
         res.send('Error')
     })
 })
-
 ```
+
+{% swagger method="post" path="/relays_round_info" baseUrl="https://api.octusbridge.io/v1/relays_pages" summary="Get relayers round info" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-response status="200: OK" description="Successful request" %}
+```
+{
+  "relays": [
+    {
+      "relayAddress": "0:ef79b4aac06c33ab3435943d196de9ba9ee48a3e4572c86a8ad3a2bf84b4f767",
+      "roundNum": 15,
+      "stake": "100000",
+      "eventsConfirmed": 661,
+      "tonToEthUsdt": "5567068.9741",
+      "ethToTonUsdt": "6485680.9782",
+      "relayPlace": null,
+      "eventsConfirmedShare": "0.9511",
+      "totalRoundConfirms": 695,
+      "roundAddress": "0:20e866e80bb8ded0ad14f7317a58b05d378fd108306aafed64650465cd68b19e",
+      "startTime": 1653999926000,
+      "endTime": 1654604726000,
+      "evmStats": []
+    },
+    ...
+   {
+      "relayAddress": "0:a2848bfafd47a43ac029e3c55c7241804be7fe3331ed3e965862431a78f528e1",
+      "roundNum": 15,
+      "stake": "100000",
+      "eventsConfirmed": 630,
+      "tonToEthUsdt": "5567068.9741",
+      "ethToTonUsdt": "5732605.3024",
+      "relayPlace": null,
+      "eventsConfirmedShare": "0.9065",
+      "totalRoundConfirms": 695,
+      "roundAddress": "0:20e866e80bb8ded0ad14f7317a58b05d378fd108306aafed64650465cd68b19e",
+      "startTime": 1653999926000,
+      "endTime": 1654604726000,
+      "evmStats": []
+    }
+  ],
+  "totalCount": 23
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+This function returns list of relayers and details about them based on the round number they are part of.&#x20;
+
+Can be used for listing all or certain number of relayers when it comes to one relay round. \
+Some of the details about the relayers are number of confirmed events and the share per event, relay’s address, list of events, place of a relayer and also info about the round such as start and end time, round number and address, etc.
+
+### Request parameters:&#x20;
+
+Required body parameters:
+
+| Name     | Example value  | Comment                                                                                            |
+| -------- | -------------- | -------------------------------------------------------------------------------------------------- |
+| limit    | 10             | Maximum number of relayers to be retrieved                                                         |
+| offset   | 0              | Offset                                                                                             |
+| ordering | stakeascending | Value based on which the retrieved relayer data will be ordered (stakeascending, stakedescending…) |
+| roundNum | 15             | Round number                                                                                       |
+
+### Response fields explanation:&#x20;
+

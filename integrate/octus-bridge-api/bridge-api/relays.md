@@ -486,3 +486,167 @@ app.post('/relays_pages/round_info', (req, res) => {
 
 })​
 ```
+
+{% swagger method="post" path="/search/relays" baseUrl="https://api.octusbridge.io/v1/relays_pages" summary="Get relayers info" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-response status="200: OK" description="Successful response" %}
+```
+{
+  "relays": [
+    {
+      "relayAddress": "0:099341ccbe3f2db59432fc1cc794773b9da06048d14e43ae24ae224dd768145d",
+      "stake": "100000",
+      "slashed": false,
+      "currentRound": true,
+      "successfulRounds": 10,
+      "totalRounds": 10,
+      "createdAt": 1651074897000,
+      "relayTotalConfirmed": 4053,
+      "potentialTotalConfirmed": 4746
+    },
+  ...
+  {
+      "relayAddress": "0:92beea3fa73ba9fa2420442eb89c7c16fdb899e9d4c10f84e34f13f651beb25f",
+      "stake": "100000",
+      "slashed": false,
+      "currentRound": true,
+      "successfulRounds": 20,
+      "totalRounds": 20,
+      "createdAt": 1645013257000,
+      "relayTotalConfirmed": 7894,
+      "potentialTotalConfirmed": 8924
+    }
+  ],
+  "totalCount": 27
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+This function **** returns basic information about relayers based on their addresses, round number and stake.
+
+### Request parameters
+
+Required body parameters:
+
+| Name                    | Example value                                                      | Comment                                                                                           |
+| ----------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------- |
+| createdAtGe             | 0                                                                  | Value representing bottom border of the date time relayer was created                             |
+| createdAtLe             | 0                                                                  | Value representing top border of the date time relayer was created                                |
+| limit                   | 10                                                                 | Maximum number of relayers to be retrieved                                                        |
+| offset                  | 0                                                                  | Offset                                                                                            |
+| ordering                | stakeascending                                                     | Value based on which the retrieved relayer data will be ordered (stakeascending, stakedescending) |
+| relayAddresses          | 0:79fc8ce8d32211a4c49adf7de1c9c0fa682ff3a13124ff027f6b92faa308ffeb | List of relayers (addresses)                                                                      |
+| roundNum                | 10                                                                 | Round number                                                                                      |
+| stakeGe                 | 50                                                                 | Bottom border of the stake amount relayer invested for participating in the round                 |
+| stakeLe                 | 1000000                                                            | Top border of the stake amount relayer invested for participating in the round                    |
+| transferContractAddress | 0:cbd090198d22e4b1a77227ba2bff58a05a32049ef2908aebfb461cacd6a474c8 | Address of the transfer contract                                                                  |
+
+Parameters used for the test:
+
+| Name     | Value          |
+| -------- | -------------- |
+| limit    | 10             |
+| offset   | 0              |
+| ordering | stakeascending |
+
+### Response fields explanation
+
+
+
+### Example&#x20;
+
+```java
+app.post('/relays_pages/search/relays', (req, res) => {
+    axios({
+        method: 'post',
+        url: `${apiUrl}/relays_pages/search/relays`,
+        data: {
+            createdAtGe: req.body.createdAtGe,
+            createdAtLe: req.body.createdAtLe,
+            limit: req.body.limit,
+            offset: req.body.offset,
+            ordering: req.body.ordering,
+            relayAddresses: req.body.relayAddresses,
+            roundNum: req.body.roundNum,
+            stakeGe: req.body.stakeGe,
+            stakeLe: req.body.stakeLe,
+            transferContractAddress: req.body.transferContractAddress
+        }
+      })
+    .then(function (response) {
+        res.send(response.data)
+    })
+    .catch(function(error){
+        console.error(error)
+        res.send('Error')
+    })
+})
+```
+
+{% swagger method="post" path="/search/relays_events" baseUrl="https://api.octusbridge.io/v1/relays_pages" summary="Get relayer's events" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-response status="200: OK" description="Successful request" %}
+```
+{
+  "relays": [
+    {
+      "transferKind": "ethtoton",
+      "contractAddress": "0:91b879d842d2292db57abd10d1cd6e83959dd27fb70189d02032314c0de542a9",
+      "chainId": 1,
+      "tokenAddress": "0:a519f99bb5d6d51ef958ed24d337ad75a1c770885dcd42d51d6663f9fcdacfb2",
+      "from": "0xcbefe3344284444ac8141c930207b8ff82a3177e",
+      "to": "0:1fcdda0bdb6cc28476575f1617949188fb9f29d35b9f86217438baf3519058c3",
+      "amount": "90000",
+      "timestamp": 1655983612000
+    },
+    ...
+     {
+      "transferKind": "ethtoton",
+      "contractAddress": "0:91b879d842d2292db57abd10d1cd6e83959dd27fb70189d02032314c0de542a9",
+      "chainId": 1,
+      "tokenAddress": "0:a519f99bb5d6d51ef958ed24d337ad75a1c770885dcd42d51d6663f9fcdacfb2",
+      "from": "0xcbefe3344284444ac8141c930207b8ff82a3177e",
+      "to": "0:1fcdda0bdb6cc28476575f1617949188fb9f29d35b9f86217438baf3519058c3",
+      "amount": "90000",
+      "timestamp": 1655983612000
+    }
+  ],
+  "totalCount": 18
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+This function returns details about relayer’s events based on the chain id of the event, kind of transfer, receiver’s address, sender’s address, token address, relayer’s address, contract’s address, round number.
+
+It can be used for filtering all the events based on the required parameters and displaying them in the list form along with information such as amount transferred, chain id, sender’s address, receiver’s address, token address etc.
+
+### Request parameters
+
+Required body parameters:
+
+| Name                    | Example value                                                      | Comment                                                         |
+| ----------------------- | ------------------------------------------------------------------ | --------------------------------------------------------------- |
+| amountGe                | 0                                                                  | Bottom border of the transferred amount                         |
+| amountLe                | 10000000000000000                                                  | Top border of the transferred amount                            |
+| chainId                 | 1                                                                  | Id of the event’s chain                                         |
+| ethUserAddress          | 0xcbefe3344284444ac8141c930207b8ff82a3177e                         | User address on the ethereum network                            |
+| limit                   | 10                                                                 | Maximum number of relayers to be retrieved                      |
+| offset                  | 0                                                                  | Offset                                                          |
+| ordering                | amountascending                                                    | Value based on which the retrieved relayer data will be ordered |
+| relayAddress            | -                                                                  | Address of the relayer                                          |
+| roundNum                | 18                                                                 | Round number                                                    |
+| timestampGe             | 1642813200000                                                      | Bottom border of the date time of the transfer                  |
+| timestampLe             | 1656032400000                                                      | Top border of the date time of the transfer                     |
+| tokenAddress            | 0:a519f99bb5d6d51ef958ed24d337ad75a1c770885dcd42d51d6663f9fcdacfb2 | Address of the transferred token                                |
+| tonUserAddress          | 0:1fcdda0bdb6cc28476575f1617949188fb9f29d35b9f86217438baf3519058c3 | User address on the everscale network                           |
+| transferContractAddress | 0:91b879d842d2292db57abd10d1cd6e83959dd27fb70189d02032314c0de542a9 | Address of the transfer contract                                |
+| transferKind            | ethtoton                                                           | Transfer kind (tontoeth, ethtoton)                              |
+

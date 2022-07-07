@@ -137,7 +137,7 @@ Required body parameters:
 | ------------ | ------------------------------------------------------------------ | ------------------------------ |
 | relayAddress | 0:daacff0f136da1d5c9fa73200d481362c44756b0ff7d083ee02e95f00a078557 | Address of the desired relayer |
 
-### Response fields explanation:
+### Response fields explanation
 
 | Name                 | Example value                                                      | Comment                                                                             |
 | -------------------- | ------------------------------------------------------------------ | ----------------------------------------------------------------------------------- |

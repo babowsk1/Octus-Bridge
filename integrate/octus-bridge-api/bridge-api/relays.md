@@ -555,9 +555,21 @@ Parameters used for the test:
 
 ### Response fields explanation
 
+| Name                    | Example value | Comment                                                                                                                             |
+|-------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| relays                  | : [              | List of relays participating in specified round and specified transfer                                                              |
+| createdAt               | 1651074897000              | Date time of becoming a relayer                                                                                                     |
+| currentRound            |  true             | True if search refers to a current round, false if not                                                                              |
+| potentialTotalConfirmed |  4749             | Number of potential events confirmed                                                                                                |
+| relayAddress            |  0:099341ccbe3f2db59432fc1cc794773b9da06048d14e43ae24ae224dd768145d             | Address of the relayer                                                                                                              |
+| relayTotalConfirmed     |  4056             | Actual number of events confirmed by a relayer                                                                                      |
+| slashed                 | false              | True if a relayer was slashed, false if not                                                                                         |
+| stake                   |  100000             | Amount relayer staked for participating in the round                                                                                |
+| successfulRounds        |  10             | Number of successful validation relay rounds of a relayer                                                                           |
+| totalRounds             |  10             | Number of all rounds relayer participated in                                                                                        |
+| totalCount              |  27             | Total number of records retrieved based on the relayers’ addresses given and transaction contract’s address for the specified round |
 
-
-### Example&#x20;
+### Example
 
 ```java
 app.post('/relays_pages/search/relays', (req, res) => {
@@ -650,3 +662,17 @@ Required body parameters:
 | transferContractAddress | 0:91b879d842d2292db57abd10d1cd6e83959dd27fb70189d02032314c0de542a9 | Address of the transfer contract                                |
 | transferKind            | ethtoton                                                           | Transfer kind (tontoeth, ethtoton)                              |
 
+### Response fields explanation 
+
+| Name            | Example value | Comment                                                                |
+|-----------------|---------------|------------------------------------------------------------------------|
+| relays          |  :[             | List of relays participating in specified round and specified transfer |
+| amount          |   90000            | Amount of transfer                                                     |
+| chainId         |  1             | Id of the event’s chain                                                |
+| contractAddress |  0:91b879d842d2292db57abd10d1cd6e83959dd27fb70189d02032314c0de542a9             | Address of the transfer contract                                       |
+| from            |  0xcbefe3344284444ac8141c930207b8ff82a3177e             | Address of the sender                                                  |
+| timestamp       | 1655983612000              | Date time of the transfer                                              |
+| to              |  0:1fcdda0bdb6cc28476575f1617949188fb9f29d35b9f86217438baf3519058c3             | Address of the receiver                                                |
+| tokenAddress    |  0:a519f99bb5d6d51ef958ed24d337ad75a1c770885dcd42d51d6663f9fcdacfb2             | Address of the transferred token                                       |
+| transferKind    | ethtoton              | Transfer kind (tontoeth, ethtoton)                                     |
+| totalCount      |    18           | Total number of relays participating in the transfer                   |

@@ -676,3 +676,304 @@ Required body parameters:
 | tokenAddress    |  0:a519f99bb5d6d51ef958ed24d337ad75a1c770885dcd42d51d6663f9fcdacfb2             | Address of the transferred token                                       |
 | transferKind    | ethtoton              | Transfer kind (tontoeth, ethtoton)                                     |
 | totalCount      |    18           | Total number of relays participating in the transfer                   |
+
+### Example
+
+```java
+app.post('/relays_pages/search/relays_events', (req, res) => {
+    axios({
+        method: 'post',
+        url: `${apiUrl}/relays_pages/search/relays_events`,
+        data: {
+            amountGe: req.body.amountGe,
+            amountLe: req.body.amountLe,
+            chainId: req.body.chainId,
+            ethUserAddress: req.body.ethUserAddress,
+            limit: req.body.limit,
+            offset: req.body.offset,
+            ordering: req.body.ordering,
+            relayAddress: req.body.relayAddress,
+            roundNum: req.body.roundNum,
+            timestampGe: req.body.timestampGe,
+            timestampLe: req.body.timestampLe,
+            tokenAddress: req.body.tokenAddress,
+            tonUserAddress: req.body.tonUserAddress,
+            transferContractAddress: req.body.transferContractAddress,
+            transferKind: req.body.transferKind
+        }
+      })
+    .then(function (response) {
+        res.send(response.data)
+    })
+    .catch(function(error){
+        console.error(error)
+        res.send('Error')
+    })
+})
+```
+
+{% swagger method="post" path="/search/global_relays_events" baseUrl="https://api.octusbridge.io/v1/relays_pages" summary="Get global relayer's events" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-response status="200: OK" description="Successful request" %}
+```
+{
+  "relays": [
+    {
+      "transferKind": "ethtoton",
+      "contractAddress": "0:91b879d842d2292db57abd10d1cd6e83959dd27fb70189d02032314c0de542a9",
+      "chainId": 1,
+      "tokenAddress": "0:a519f99bb5d6d51ef958ed24d337ad75a1c770885dcd42d51d6663f9fcdacfb2",
+      "from": "0xcbefe3344284444ac8141c930207b8ff82a3177e",
+      "to": "0:1fcdda0bdb6cc28476575f1617949188fb9f29d35b9f86217438baf3519058c3",
+      "amount": "90000",
+      "timestamp": 1655983612000
+    }
+  ],
+  "totalCount": 1
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+This function returns details about relayer’s events based on the chain id of the event, kind of transfer, receiver’s address, sender’s address, token address, relayer’s address, contract’s address, round number. 
+
+It can be used for filtering all the events based on the required parameters and displaying them in the list form along with information such as amount transferred, chain id, sender’s address, receiver’s address, token address etc.
+
+### Request parameters
+
+Required body parameters:
+
+
+| Name                    | Example value | Comment                                                         |
+|-------------------------|---------------|-----------------------------------------------------------------|
+| amountGe                |    0           | Bottom border of the transferred amount                         |
+| amountLe                |   10000000000000000            | Top border of the transferred amount                            |
+| chainId                 | 1              | Id of the event’s chain                                         |
+| ethUserAddress          |  0xcbefe3344284444ac8141c930207b8ff82a3177e             | User address on the ethereum network                            |
+| limit                   | 10              | Maximum number of relayers to be retrieved                      |
+| offset                  |  0             | Offset                                                          |
+| ordering                |  amountascending             | Value based on which the retrieved relayer data will be ordered |
+| relayAddress            | -              | Address of the relayer                                          |
+| roundNum                |  18             | Round number                                                    |
+| timestampGe             |  1642813200000             | Bottom border of the date time of the transfer                  |
+| timestampLe             |  1656032400000             | Top border of the date time of the transfer                     |
+| tokenAddress            |   0:a519f99bb5d6d51ef958ed24d337ad75a1c770885dcd42d51d6663f9fcdacfb2            | Address of the transferred token                                |
+| tonUserAddress          | 0:1fcdda0bdb6cc28476575f1617949188fb9f29d35b9f86217438baf3519058c3              | User address on the everscale network                           |
+| transferContractAddress |  0:91b879d842d2292db57abd10d1cd6e83959dd27fb70189d02032314c0de542a9             | Address of the transfer contract                                |
+| transferKind            |   ethtoton            | Transfer kind (tontoeth, ethtoton)                              |
+
+### Response fields explanation 
+
+| Name            | Example value | Comment                                                                |
+|-----------------|---------------|------------------------------------------------------------------------|
+| relays          |               | List of relays participating in specified round and specified transfer |
+| amount          |  90000             | Transferred amount                                                     |
+| chainId         |  1             | Id of the event’s chain                                                |
+| contractAddress |  091b879d842d2292db57abd10d1cd6e83959dd27fb70189d02032314c0de542a9             | Address of the transfer contract                                       |
+| from            |   0xcbefe3344284444ac8141c930207b8ff82a3177e            | Address of the sender                                                  |
+| timestamp       |  1655983612000             | Date time of the transfer                                              |
+| to              |   01fcdda0bdb6cc28476575f1617949188fb9f29d35b9f86217438baf3519058c3            | Address of the receiver                                                |
+| tokenAddress    |  0a519f99bb5d6d51ef958ed24d337ad75a1c770885dcd42d51d6663f9fcdacfb2             | Address of the transferred token                                       |
+| transferKind    |  ethtoton             | Transfer kind (tontoeth, ethtoton)                                     |
+| totalCount      | 1              | Total number of relays participating in the transfer                   |
+
+### Example
+
+```java
+app.post('/relays_pages/search/global_relays_events', (req, res) => {
+    axios({
+        method: 'post',
+        url: `${apiUrl}/relays_pages/search/global_relays_events`,
+        data: {
+            amountGe: req.body.amountGe,
+            amountLe: req.body.amountLe,
+            chainId: req.body.chainId,
+            ethUserAddress: req.body.ethUserAddress,
+            limit: req.body.limit,
+            offset: req.body.offset,
+            ordering: req.body.ordering,
+            roundNum: req.body.roundNum,
+            timestampGe: req.body.timestampGe,
+            timestampLe: req.body.timestampLe,
+            tokenAddress: req.body.tokenAddress,
+            tonUserAddress: req.body.tonUserAddress,
+            transferContractAddress: req.body.transferContractAddress,
+            transferKind: req.body.transferKind
+        }
+      })
+    .then(function (response) {
+        res.send(response.data)
+    })
+    .catch(function(error){
+        console.error(error)
+        res.send('Error')
+    })
+})
+```
+
+{% swagger method="post" path="/rounds_calendar" baseUrl="https://api.octusbridge.io/v1/relays_pages" summary="Get rounds calendar" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-response status="200: OK" description="Successful request" %}
+```
+[
+  {
+    "roundAddress": "0:77f4e7eb93d7fb3432f297782f2cd2e5fb2a62bb05d8a9590ea54c6ab954254d",
+    "roundNum": 1,
+    "startTime": 1645303857000,
+    "endTime": 1645908657000,
+    "electionStartTime": 1644958278000,
+    "electionEndTime": 1645131078000
+  },
+  ...
+  {
+    "roundAddress": "0:547c234e01d17b33331ed0f1270598906bcfec03d55d414cafc69e6118258da5",
+    "roundNum": 9,
+    "startTime": 1650371126000,
+    "endTime": 1650975926000,
+    "electionStartTime": 1650025543000,
+    "electionEndTime": 1650198343000
+  }
+]
+```
+{% endswagger-response %}
+{% endswagger %}
+
+This fuction returns data about the rounds between from and to rounds numbers.  
+
+It can be used as round’s calendar where data about election start and end time, round’s start and end time, number and address for each round will be displayed
+
+### Request parameters
+
+Required body parameters:
+
+| Name         | Example value | Comment                        |
+|--------------|---------------|--------------------------------|
+| fromRoundNum | 1             | First round number to retrieve |
+| toRoundNum   | 10            | Last round number to retrieve  |
+
+### Response fields explanation
+
+| Name              | Example value | Comment                               |
+|-------------------|---------------|---------------------------------------|
+| electionEndTime   |1645131078000               | Date time of the election’s end       |
+| electionStartTime |  1644958278000             | Date time of the election’s start     |
+| endTime           | 1645908657000              | Date time of the round’s end          |
+| roundAddress      | 0:77f4e7eb93d7fb3432f297782f2cd2e5fb2a62bb05d8a9590ea54c6ab954254d              | Address of the validation relay round |
+| roundNum          | 1              | Round number                          |
+| startTime         | 1645303857000              | Date time of the round’s start        |
+
+### Example
+
+```java
+app.post('/relays_pages/rounds_calendar', (req, res) => {
+    axios({
+        method: 'post',
+        url: `${apiUrl}/relays_pages/rounds_calendar`,
+        data: {
+            fromRoundNum: req.body.fromRoundNum,
+            toRoundNum: req.body.toRoundNum
+        }
+      })
+    .then(function (response) {
+        res.send(response.data)
+    })
+    .catch(function(error){
+        console.error(error)
+        res.send('Error')
+    })
+})
+```
+
+{% swagger method="post" path="/relays_pages/relay_rounds_info" baseUrl="https://api.octusbridge.io/v1/relays_pages" summary="Get validation rounds info" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-response status="200: OK" description="Successful request" %}
+```
+{
+  "relays": [
+    {
+      "roundAddress": "0:cc312267aa40b7f9a56ce1aad46dbca5088c2d30ee1ba88555d2e97941ac9816",
+      "roundNum": 10,
+      "stake": "244636",
+      "eventsConfirmed": 529,
+      "toTonUsdt": "4509235.2178",
+      "toTonUsdtShare": "0.4642",
+      "fromTonUsdt": "5204152.7479",
+      "fromTonUsdtShare": "0.5358",
+      "startTime": 1650975926000,
+      "endTime": 1651580726000,
+      "eventsShare": "0.8773"
+    }
+  ],
+  "totalCount": 0
+}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+This function returns information about the relayerabout relayer relay taking part in the specific round based on itsit’s address and round number. 
+
+It can be used for filtering where relayer’s and round’s information, for the chosen round, such as round end, round start, events information, amount of assets transferred through the round etc., will be displayed.
+
+### Request parameters
+
+Required body parameters:
+
+| Name        | Example value | Comment                                                                                            |
+|-------------|---------------|----------------------------------------------------------------------------------------------------|
+| limit       |10| Maximum number of relayers to be retrieved                                                         |
+| offset      |0| Offset                                                                                             |
+| ordering    |stakeascending| Value based on which the retrieved relayer data will be ordered (stakeascending, stakedescending…) |
+| userAddress |0:daacff0f136da1d5c9fa73200d481362c44756b0ff7d083ee02e95f00a078557| Address of the relayer                                                                             |
+| roundNum    |10| Round number                                                                                       |
+
+### Response fields explonation
+
+| Name             | Example value | Comment                                                                              |
+|------------------|---------------|--------------------------------------------------------------------------------------|
+| relays           |: [| Relay with specified address participating in specified round                        |
+| endTime          |1651580726000| Round end time                                                                       |
+| eventsConfirmed  |529| Total number of confirmed events                                                     |
+| eventsShare      |0.8773| Amount of share relayer earns per event                                              |
+| fromTonUsdt      |5204152.7479| Amount of USDTs transferred from everscale                                           |
+| fromTonUsdtShare |0.5358| Share of transferring evers to usdt                                                  |
+| roundAddress     |0:cc312267aa40b7f9a56ce1aad46dbca5088c2d30ee1ba88555d2e97941ac9816| Address of the specified round                                                       |
+| roundNum         |10| Round number                                                                         |
+| stake            |244636| Invested stake of a relayer for participating in the round                           |
+| startTime        |1650975926000| Round start time                                                                     |
+| toTonUsdt        |4509235.2178| Amount of USDTs transferred to everscale                                             |
+| toTonUsdtShare   |0.4642| Share of transferring to everscale in USDTs                                          |
+| totalCount       |0| Total number of relayers with specified address participating in the specified round |
+
+### Example
+
+```java
+app.post('/relays_pages/relay_rounds_info', (req, res) => {
+    axios({
+        method: 'post',
+        url: `${apiUrl}/relays_pages/relay_rounds_info`,
+        data: {
+            limit: req.body.limit,
+            offset: req.body.offset,
+            ordering: req.body.ordering,
+            roundNum: req.body.roundNum,
+            userAddress: req.body.userAddress
+        }
+      })
+    .then(function (response) {
+        res.send(response.data)
+    })
+    .catch(function(error){
+        console.error(error)
+        res.send('Error')
+    })
+})
+```

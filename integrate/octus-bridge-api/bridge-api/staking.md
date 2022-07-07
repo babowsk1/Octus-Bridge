@@ -200,7 +200,7 @@ app.post('/staking/search/transactions', (req, res) => {
 })
 ```
 
-{% swagger method="post" path="/main" baseUrl="https://api.octusbridge.io/v1/staking" summary="Get main page data" %}
+{% swagger method="get" path="/main" baseUrl="https://api.octusbridge.io/v1/staking" summary="Get main page data" %}
 {% swagger-description %}
 
 {% endswagger-description %}

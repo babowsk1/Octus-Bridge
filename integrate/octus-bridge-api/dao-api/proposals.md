@@ -126,15 +126,15 @@ Required body parameters:
 | Name            | Example value | Comment                                                                |
 |-----------------|---------------|------------------------------------------------------------------------|
 | ethActions      |               | list of all the actions arrived from Everscale with following data:    |
-| callData        |               | Additional call data                                                   |
-| chainId         |               | Id of the chain where the action happened                              |
-| signature       |               | Relay’s signature                                                      |
-| target          |0:cb5f0cb869c91731da283f5546c42d3a3353e6e260dda170b4650970b62519b0| Target address                                                         |
-| value           |1000000000| Amount of tokens                                                       |
+| - callData        |"string"| Additional call data                                                   |
+| - chainId         |0| Id of the chain where the action happened                              |
+| - signature       |"string"| Relay’s signature                                                      |
+| - target          |"string"| Target address                                                         |
+| - value           |"string"| Amount of tokens                                                       |
 | tonActions      |               | list of all the actions arrived from ethereum side:                    |
-| payload         |te6ccgEBAgEAEQABCAMFmxgBABBBY2NlcHRlZA| Payload data                                                           |
-| target          |0:cb5f0cb869c91731da283f5546c42d3a3353e6e260dda170b4650970b62519b0| Target address                                                         |
-| value           |1000000000| Amount of tokens                                                       |
+| - payload         |te6ccgEBAgEAEQABCAMFmxgBABBBY2NlcHRlZA| Payload data                                                           |
+| - target          |0:cb5f0cb869c91731da283f5546c42d3a3353e6e260dda170b4650970b62519b0| Target address                                                         |
+| - value           |1000000000| Amount of tokens                                                       |
 | againstVotes    |0| Number of votes against proposal                                       |
 | canceled        |false| True if proposal is canceled, false if not                             |
 | canceledAt      |null| Date time of canceling event in UNIX format                            |

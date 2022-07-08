@@ -134,7 +134,7 @@ function tagVault(address vault, string memory tag) external
 | Name  | Type          | Description     |
 |-------|---------------|-----------------|
 | vault | address       | Vault’s address |
-| tag   | string memory | Vault’s tag     |
+| tag   | "string" memory | Vault’s tag     |
 
 **Events emitted:**
 - VaultTagged

@@ -62,3 +62,31 @@ Required body parameters:
 | transactionHash |3024c7309609b69cf8ad0f6efc686fb3bf91ccc257261e9063c5cee35ac6f7cf| Hash code of the transaction                                         |
 | voter           |99ea964906c807e89ff8e55ba96a86e4d85d8020c8365ded9428777aef4281cd| Voter’s address                                                      |
 | votes           |5061664014| Amount staked for voting                                             |
+
+### Example
+
+```java
+app.post('/votes/search', (req, res) => {
+ 
+    axios({
+        method: 'post',
+        url: `${apiUrl}/votes/search`,
+        data: {
+            limit: req.body.limit,
+            locked: req.body.locked,
+            offset: req.body.offset,
+            ordering: req.body.ordering,
+            proposalId: req.body.proposalId,
+            support: req.body.support,
+            voter: req.body.voter
+        }
+    })
+    .then(function(response){
+        res.send(response.data)
+    })
+    .catch(function(error){
+        console.error(error)
+        res.send('Error')
+    })
+  })
+```

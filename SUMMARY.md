@@ -136,6 +136,9 @@
     * [Staking](integrate/octus-bridge-api/bridge-api/staking.md)
     * [Transfers](integrate/octus-bridge-api/bridge-api/transfers.md)
   * [DAO API](integrate/octus-bridge-api/dao-api/README.md)
+    * [Proposals](integrate/octus-bridge-api/dao-api/proposals.md)
+    * [Voters](integrate/octus-bridge-api/dao-api/voters.md)
+    * [Votes](integrate/octus-bridge-api/dao-api/votes.md)
 
 ## see also
 

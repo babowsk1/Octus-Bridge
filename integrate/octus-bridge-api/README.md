@@ -31,7 +31,7 @@ All of the API call methods below are divided into 2 sections:&#x20;
   2\. [Voters](dao-api/voters.md)\
   3\. [Votes](dao-api/votes.md)
 
-## Node.js code snippets
+## Code snippets
 
 The following examples use the libraries:
 

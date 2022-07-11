@@ -131,7 +131,7 @@
 * [Token Contracts](integrate/token-contracts/README.md)
 * [Open API](integrate/octus-bridge-api/README.md)
   * [Bridge API](integrate/octus-bridge-api/bridge-api/README.md)
-    * [Relays](integrate/octus-bridge-api/bridge-api/relays.md)
+    * [Relayers](integrate/octus-bridge-api/bridge-api/relays.md)
     * [DAO](integrate/octus-bridge-api/bridge-api/dao.md)
     * [Staking](integrate/octus-bridge-api/bridge-api/staking.md)
     * [Transfers](integrate/octus-bridge-api/bridge-api/transfers.md)

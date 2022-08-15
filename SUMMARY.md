@@ -75,7 +75,6 @@
     * [Proposals](use/governance/concepts/proposals.md)
     * [How to buy BRIDGE](use/governance/concepts/how-to-buy-bridge.md)
 * [Relayers](use/relayers/README.md)
-  * [Interface](use/relayers/interface.md)
   * [How to](use/relayers/how-to/README.md)
     * [How to become a relayer](use/relayers/how-to/how-to-become-a-relayer.md)
   * [Concepts](use/relayers/concepts/README.md)

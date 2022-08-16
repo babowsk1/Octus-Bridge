@@ -1,6 +1,6 @@
 # Available chains and assets
 
-Using the [**Universal Bridge**](universal-bridge.md) mechanism, you can transfer any tokens to and from Everscale, however, at the moment, Universal Bridge does not support working with two outside networks. \
+Using the [**Universal Bridge**](universal-bridge.md) mechanism, you can transfer any tokens to and from Everscale, however, at the moment, Universal Bridge does not support working with two outside networks.\
 \
 The tokens available for transfer from each network are shown in the table below:
 
@@ -37,7 +37,7 @@ The tokens available for transfer from each network are shown in the table below
 
 {% tab title="Fantom Opera" %}
 * USDC
-* DAI&#x20;
+* DAI
 * WBTC
 * WETH
 {% endtab %}
@@ -51,6 +51,6 @@ The tokens available for transfer from each network are shown in the table below
 {% endtab %}
 
 {% tab title="Milkomeda" %}
-
+* Use the Universal Bridge
 {% endtab %}
 {% endtabs %}

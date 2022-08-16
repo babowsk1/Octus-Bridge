@@ -14,9 +14,9 @@ To get started, go to the **Cross-Chain Transfer** page using the **Bridge** but
 
 Here you can select the source and destination network for the transfer.
 
-“<mark style="color:orange;">**From**</mark>” refers to the network from which you plan to withdraw tokens, and “<mark style="color:orange;">**To**</mark>” refers to the network to which tokens will be sent.
+“<mark style="background-color:orange;">**From**</mark>” refers to the network from which you plan to withdraw tokens, and “<mark style="background-color:orange;">**To**</mark>” refers to the network to which tokens will be sent.
 
-You can also enter the <mark style="color:green;">**recipient's wallet address**</mark> manually, but the gas commission will be debited from the account of the connected wallet.
+You can also enter the <mark style="background-color:green;">**recipient's wallet address**</mark> manually, but the gas commission will be debited from the account of the connected wallet.
 
 ![](<../../../../.gitbook/assets/image (36).png>)
 

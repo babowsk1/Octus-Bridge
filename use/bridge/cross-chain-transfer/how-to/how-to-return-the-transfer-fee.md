@@ -11,7 +11,7 @@ Now go to [**EVER Wallet**](https://app.gitbook.com/o/-MUxjK3XWZCxuBwyXzkS/s/vwt
 \
 Be sure to add the following text in the **comment field:**\
 _**te6ccgEBAQEABgAACAVriBQ=**_\
-**\_**\_\
-\_\*\*\*\*\_Then confirm the transaction and wait a little while for EVER to arrive in your wallet.\\
+\
+Then confirm the transaction and wait a little while for EVER to arrive in your wallet.\\
 
 ![](<../../../../.gitbook/assets/image (43).png>)

@@ -14,9 +14,9 @@ To get started, go to the **Cross-Chain Transfer** page using the **Bridge** but
 
 Here you can select the source and destination network for the transfer.
 
-“<mark style="color:orange;">**From**</mark>” refers to the network from which you plan to withdraw tokens, and “<mark style="color:orange;">**To**</mark>” refers to the network to which tokens will be sent.
+“<mark style="background-color:orange;">**From**</mark>” refers to the network from which you plan to withdraw tokens, and “<mark style="color:orange;">**To**</mark>” refers to the network to which tokens will be sent.
 
-You can also enter the <mark style="color:green;">**recipient's wallet address**</mark> manually, but the gas commission will be debited from the account of the connected wallet.
+You can also enter the <mark style="background-color:green;">**recipient's wallet address**</mark> manually, but the gas commission will be debited from the account of the connected wallet.
 
 ![](<../../../../.gitbook/assets/image (5).png>)
 
@@ -32,7 +32,7 @@ If you wish, you can manually specify the desired amount of EVER for the exchang
 Review the number of tokens that you will receive as a result of the operation and click **Next**.
 
 {% hint style="warning" %}
-Please note \*\*\*\* that your wallet must be [**deployed** ](https://app.gitbook.com/s/vwtaQbYcgICT7ubKSITZ/getting-started/install-and-singing-in/deploy/how-to-deploy-your-wallet)to pay commissions on the Everscale network.\
+Please note that your wallet must be [**deployed** ](https://app.gitbook.com/s/vwtaQbYcgICT7ubKSITZ/getting-started/install-and-singing-in/deploy/how-to-deploy-your-wallet)to pay commissions on the Everscale network.\
 After your wallet has been successfully deployed, you can proceed with the transfer procedure.
 {% endhint %}
 

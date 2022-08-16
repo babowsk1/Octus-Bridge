@@ -2,10 +2,10 @@
 
 The **My Staking Balance** section is designed to deposit and withdraw BRIDGE tokens from your staking balance and receive earned rewards:
 
-* The **Stake** window is necessary in order to make a deposit to Staking
-* The **Redeem** window has two functions:
+The **Stake** window is necessary in order to make a deposit.
 
-1. **Claim** - Used to display accumulated rewards.
-2. **Redeem** - Outputs the desired amount of deposit that you made in Stacking.
+The **Redeem** window has two functions:\
+&#x20;1\. Claim allows you to pick up an earned reward.\
+&#x20;2\. Redeem allows you to pick up the Bridge tokens you have staked.
 
-![](<../../../../.gitbook/assets/image (58).png>)
+![](<../../../../.gitbook/assets/image (14).png>)

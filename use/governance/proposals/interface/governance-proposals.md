@@ -11,4 +11,4 @@ The block also displays the following information:
 
 In the upper right part of the block, you can set **filters** to search for proposals: by voting start and end date and status.
 
-![](<../../../../.gitbook/assets/image (14).png>)
+![](<../../../../.gitbook/assets/image (14) (1).png>)

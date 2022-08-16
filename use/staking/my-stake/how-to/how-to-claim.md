@@ -6,4 +6,4 @@ On the right side of the **My staking balance** block, select **Claim**.\
 \
 When the reward is available, you can get it by clicking on the appropriate button.
 
-![](<../../../../.gitbook/assets/image (54).png>)
+![](<../../../../.gitbook/assets/image (24).png>)

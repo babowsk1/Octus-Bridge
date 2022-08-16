@@ -11,4 +11,4 @@ Displayed here:
 
 For convenience, at the top of the block, you can select the type of transaction you need.
 
-![](<../../../../.gitbook/assets/image (31).png>)
+![](<../../../../.gitbook/assets/image (25).png>)

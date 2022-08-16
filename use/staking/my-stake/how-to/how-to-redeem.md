@@ -6,7 +6,7 @@ At the **Amount** field you need to specify the desired number of tokens that yo
 
 After you have specified the amount, click **Redeem**.
 
-![](<../../../../.gitbook/assets/image (24).png>)
+![](<../../../../.gitbook/assets/image (24) (1).png>)
 
 Next, you need to confirm all actions in your EVER wallet. Note that you will need 11.5 EVER to pay for gas, most of which will be returned when the transaction is complete.
 

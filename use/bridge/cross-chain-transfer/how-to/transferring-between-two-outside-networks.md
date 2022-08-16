@@ -62,7 +62,7 @@ Octus Bridge will keep you informed every step of the transaction so you don't h
 First, click on **Transfer** to send your tokens to the source network storage.\
 Confirm this action in your wallet and wait for a while for the action to complete.
 
-![](<../../../../.gitbook/assets/image (1).png>)
+![](<../../../../.gitbook/assets/image (1) (1).png>)
 
 After a while, you will see that the status of this action has changed to **Confirmed**.\
 Now you need to prepare tokens for sending to the Everscale network.\

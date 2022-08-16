@@ -6,4 +6,4 @@ The **My staking performance** section is needed to keep track of your staking b
 * History section shows the history of your staking deposits, so that you can see the progress of your deposits.
 * Reward section shows the amount of rewards you have earned.
 
-![](<../../../../.gitbook/assets/image (2).png>)
+![](<../../../../.gitbook/assets/image (28).png>)

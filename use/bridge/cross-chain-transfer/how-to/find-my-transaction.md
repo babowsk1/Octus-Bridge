@@ -8,4 +8,4 @@ Scroll to [**All transfers**](../../history/interface/all-transfers.md) and chos
 
 By clicking on one of the transactions to go to its page.
 
-![](<../../../../.gitbook/assets/image (16).png>)
+![](<../../../../.gitbook/assets/image (16) (1).png>)

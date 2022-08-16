@@ -9,4 +9,4 @@ Let's analyze it in detail:
 * 30d reward, BRIDGE - Shows the amount of rewards received during the month.
 * Average APR **-** The amount of rewards received per year.
 
-![](<../../../../.gitbook/assets/image (11).png>)
+![](<../../../../.gitbook/assets/image (16).png>)

@@ -79,6 +79,7 @@
     * [How to become a relayer](use/relayers/how-to/how-to-become-a-relayer.md)
   * [Concepts](use/relayers/concepts/README.md)
     * [Octus Bridge relayers](use/relayers/concepts/octus-bridge-relayers.md)
+* [Litepaper](use/litepaper.md)
 
 ## 🛠 Integrate
 

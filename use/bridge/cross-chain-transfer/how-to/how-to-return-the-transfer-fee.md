@@ -1,6 +1,6 @@
 # How to return the transfer fee
 
-You can get back about \~5.2 EVER, from the transaction fee.
+You can return \~ 5,2 EVERs from the commission charged for transactions from Everscale to any EVM network.
 
 {% hint style="info" %}
 Please note that you can return the commission for the transfer only after it has been completed!

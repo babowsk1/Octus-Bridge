@@ -6,4 +6,4 @@ The top block of the **Explorer** section contains a graph showing **TVL** - the
 * Average APR - the average annual return on staking
 * Stakeholders - the total number of stakeholders at the moment
 
-![](<../../../../.gitbook/assets/image (7).png>)
+![](<../../../../.gitbook/assets/image (7) (1).png>)

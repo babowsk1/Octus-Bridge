@@ -4,7 +4,7 @@ To find any Octus Bridge transaction go to the [**History** ](../../history/)sec
 
 Scroll to [**All transfers**](../../history/interface/all-transfers.md) and chose some **filters** - it could your address and transaction status. Then click **Apply**.
 
-![](<../../../../.gitbook/assets/image (10).png>)
+![](<../../../../.gitbook/assets/image (10) (1).png>)
 
 By clicking on one of the transactions to go to its page.
 

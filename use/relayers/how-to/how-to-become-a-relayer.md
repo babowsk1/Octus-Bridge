@@ -21,4 +21,4 @@ Click **Confirm** for Everscale and Ethereum Keys and then **Broadcast** Ethereu
 
 After completing all the steps, you will receive a notification that the relayer has been created and you can go to the **Relayer page.**
 
-![](<../../../.gitbook/assets/image (3).png>)
+![](<../../../.gitbook/assets/image (3) (1).png>)

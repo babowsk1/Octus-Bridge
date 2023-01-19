@@ -17,7 +17,7 @@ Then confirm the transaction and wait a little while for EVER to arrive in your 
 <figure><img src="../../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-You can get Everscale network fees back when you make transfers using [Invisible Bridge](../../concepts/invisible-bridge.md)
+You can get Everscale network fee back when you make transfers using [Invisible Bridge](../../concepts/invisible-bridge.md)
 {% endhint %}
 
 In this case, the process is practically the same as described above, just send your EVERs, attaching a comment[^1], to the address from the line `Prepare second transfer`:

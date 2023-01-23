@@ -1,5 +1,5 @@
 ---
-description: Moving any tokens between any networks
+description: Moving any tokens between Everscale and EVM networks
 ---
 
 # Universal Bridge

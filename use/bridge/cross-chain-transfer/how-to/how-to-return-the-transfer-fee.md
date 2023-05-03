@@ -6,10 +6,10 @@ You can return \~ 5,2 EVERs from the commission charged for transactions from Ev
 Please note that you can return the commission for the transfer only after it has been completed!
 {% endhint %}
 
-First, you need to[ find your transaction](find-my-transaction.md) and go to the **** transfer page.\
+First, you need to[ find your transaction](find-my-transaction.md) and go to the transfer page.\
 Here you need to copy the `transfer address`. Just click on the icon.
 
-Now go to [EVER Wallet](https://app.gitbook.com/o/-MUxjK3XWZCxuBwyXzkS/s/vwtaQbYcgICT7ubKSITZ/) (in our case it is an extension) and [send ](https://docs.everwallet.net/manage-assets/sending-and-receiving-tokens)about \~0.1 EVER to the `transfer address` we copied.\
+Now go to [EVER Wallet](http://localhost:5000/o/-MUxjK3XWZCxuBwyXzkS/s/vwtaQbYcgICT7ubKSITZ/) (in our case it is an extension) and [send ](https://docs.everwallet.net/manage-assets/sending-and-receiving-tokens)about \~0.1 EVER to the `transfer address` we copied.\
 \
 Be sure to add the following text in the comment field: _**`te6ccgEBAQEABgAACAVriBQ=`**_\
 Then confirm the transaction and wait a little while for EVER to arrive in your wallet:

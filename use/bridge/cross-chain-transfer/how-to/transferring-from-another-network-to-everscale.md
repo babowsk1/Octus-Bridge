@@ -10,33 +10,33 @@ Click **Connect Wallet** and [connect both wallets](../../../getting-started/how
 
 ### Source and target blockchain
 
-To get started, go to the **Cross-Chain Transfer** page using the **Bridge** button at the top of the page.
+To get started, go to the `Cross-Chain Transfer` page using the `Bridge` button at the top of the page.
 
 Here you can select the source and destination network for the transfer.
 
-“<mark style="background-color:orange;">**From**</mark>” refers to the network from which you plan to withdraw tokens, and “<mark style="color:orange;">**To**</mark>” refers to the network to which tokens will be sent.
+`From` refers to the network from which you plan to withdraw tokens, and `To` refers to the network to which tokens will be sent.
 
-You can also enter the <mark style="background-color:green;">**recipient's wallet address**</mark> manually, but the gas commission will be debited from the account of the connected wallet.
+You can also enter the `recipient's wallet address` manually, but the gas commission will be debited from the account of the connected wallet.
 
 ![](<../../../../.gitbook/assets/image (5) (1).png>)
 
 ### Select token and amount
 
-Click **Next** to go to the **Select token and amount** page.\
+Click `Next` to go to the `Select token and amount` page.\
 Here you need to select the token that you want to transfer to another network and also enter the amount of tokens to be transferred.
 
-Using the **Universal Bridge** mechanism, you can transfer any token from another network to Everscale, find out how in the [appropriate section](../../concepts/universal-bridge.md).\
+Using the [Universal Bridge](../../concepts/universal-bridge.md) mechanism, you can transfer any token from another network to Everscale, find out how in the [appropriate section](../../concepts/universal-bridge.md).\
 \
-At this stage, if you wish, you can choose to pay **gas fee with the selected token.** In this case, Octus Bridge will convert a portion of your tokens (in our case DAI) equivalent to 10 EVER to pay Everscale network fees.\
+At this stage, if you wish, you can choose to pay gas fee with the selected token**.** In this case, Octus Bridge will convert a portion of your tokens (in our case BNB) equivalent to 100 EVER to pay Everscale network fees.\
 If you wish, you can manually specify the desired amount of EVER for the exchange.\
-Review the number of tokens that you will receive as a result of the operation and click **Next**.
+Review the number of tokens that you will receive as a result of the operation and click `Next`.
 
 {% hint style="warning" %}
 Please note that your wallet must be [**deployed** ](broken-reference)to pay commissions on the Everscale network.\
 After your wallet has been successfully deployed, you can proceed with the transfer procedure.
 {% endhint %}
 
-![](<../../../../.gitbook/assets/image (55).png>)
+<figure><img src="../../../../.gitbook/assets/bnb-ever.png" alt=""><figcaption></figcaption></figure>
 
 ### Permission to use tokens
 
@@ -45,9 +45,11 @@ At this step, you need to grant Octus Bridge permission to use tokens from the b
 1. You can confirm an infinite amount so that you do not have to pay for confirmation later if you decide to make another transfer.
 2. You can choose to only confirm the amount required for this transfer.
 
-**Regardless of your choice, the bridge will only use the amount you ask for.**
+{% hint style="info" %}
+Regardless of your choice, the bridge will only use the amount you ask for.
+{% endhint %}
 
-After choosing one of the options, click **Confirm** and confirm the action in your wallet (the window should open automatically).\
+After choosing one of the options, click `Confirm` and confirm the action in your wallet (the window should open automatically).\
 Then you can proceed to the next step.
 
 ![](<../../../../.gitbook/assets/image (12).png>)

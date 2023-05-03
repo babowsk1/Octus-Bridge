@@ -21,12 +21,12 @@ Swagger scheme
 
 All of the API call methods below are divided into 2 sections:&#x20;
 
-* ****[**Bridge API**](bridge-api/): \
+* [**Bridge API**](bridge-api/): \
   1\. [Relayers](bridge-api/relays.md)\
   2\. [DAO](bridge-api/dao.md)\
   3\. [Staking](bridge-api/staking.md)\
   4\. [Transfers](bridge-api/transfers.md)
-* ****[**DAO API**](dao-api/):\
+* [**DAO API**](dao-api/):\
   1\. [Proposals](dao-api/proposals.md)\
   2\. [Voters](dao-api/voters.md)\
   3\. [Votes](dao-api/votes.md)

@@ -6,7 +6,7 @@
 
 To get started you need to connect wallets to the Octus Bridge interface, which will be used to interact with the selected networks and pay commissions, respectively.
 
-Click **Connect Wallet** and [connect both wallets](../../../getting-started/how-to-connect-wallets.md#connect-wallets).
+Click `Connect Wallet` and [connect both wallets](../../../getting-started/how-to-connect-wallets.md#connect-wallets).
 
 ### Source and target blockchain
 
@@ -56,7 +56,7 @@ Then you can proceed to the next step.
 
 ### Transfer status
 
-The **Transfer status** page displays the steps in the transfer process.\
+The `Transfer status` page displays the steps in the transfer process.\
 At this step, the tokens are directly sent to the selected network.\
 Basically all you have to do is wait. The whole process happens automatically, you only need to make a few clicks on the site itself and inside the wallet to confirm the operation and pay commissions.\
 Octus Bridge will keep you informed every step of the transaction so you don't have to worry about getting your funds.
@@ -65,15 +65,15 @@ Octus Bridge will keep you informed every step of the transaction so you don't h
 **Please note that all subsequent actions are irreversible!** Tokens will be debited from your wallet and will not be available until you complete the transfer.
 {% endhint %}
 
-First, click on **Transfer** to send your tokens to the source network storage. Confirm this action in your wallet and wait for a while for the action to complete.
+First, click on `Transfer` to send your tokens to the source network storage. Confirm this action in your wallet and wait for a while for the action to complete.
 
 ![](<../../../../.gitbook/assets/image (20).png>)
 
-After a while, you will see that the status of this action has changed to **Confirmed**.\
+After a while, you will see that the status of this action has changed to `Confirmed`.\
 Now you need to prepare tokens for sending to the Everscale network.\
-Click **Prepare** and confirm the action in the wallet.
+Click `Prepare` and confirm the action in the wallet.
 
-Wait until all statuses change to **Confirmed** - it won't take long.
+Wait until all statuses change to `Confirmed` - it won't take long.
 
 After successfully completing all the steps, a window will open informing you that the transfer was completed successfully and the corresponding tokens will be added to your balance.
 

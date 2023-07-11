@@ -1,7 +1,5 @@
 # Transferring from another network to Everscale
 
-{% embed url="https://youtu.be/4NtWe-BL5TQ" %}
-
 ### Connect wallets
 
 To get started you need to connect wallets to the Octus Bridge interface, which will be used to interact with the selected networks and pay commissions, respectively.

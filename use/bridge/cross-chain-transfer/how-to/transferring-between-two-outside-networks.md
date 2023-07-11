@@ -1,7 +1,5 @@
 # Transferring between two outside networks
 
-{% embed url="https://youtu.be/ylP8ezMip2A" %}
-
 ### Connect wallets
 
 To get started you need to connect wallets to the Octus Bridge interface, which will be used to interact with the selected networks and pay commissions, respectively.

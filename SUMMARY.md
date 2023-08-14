@@ -83,6 +83,7 @@
 
 ## 🛠 Integrate
 
+* [Octus Bridge Integration Guide](https://integrate.octusbridge.io/docs/addresses.html)
 * [Octus Bridge Contracts](integrate/octus-bridge-contracts/README.md)
   * [Everscale](integrate/octus-bridge-contracts/everscale/README.md)
     * [Bridge section](integrate/octus-bridge-contracts/everscale/bridge-section/README.md)
